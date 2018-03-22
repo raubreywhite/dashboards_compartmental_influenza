@@ -212,7 +212,7 @@ Ulvik 439
 Granvin 369
 Voss 7553
 Kvam 5052
-Fusa -98
+Fusa 1600
 Samnanger 960
 Os(Hord.) 15215
 Austevoll 1340
