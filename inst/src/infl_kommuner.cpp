@@ -644,6 +644,21 @@ int main(int nargs, char ** argsv){
 	}
 	infile.close();
 
+
+    int *startPoints = new int[n];
+    ifstream start_infile("start_infected.txt");
+  	if(!start_infile.is_open()){
+  		cout << "Error in opening infected file" << endl;
+  		exit(1);
+  	}
+    int temp_i=0;
+    int tmp_startpoint;
+	while(start_infile >> tmp_startpoint){
+        startPoints[temp_i] = tmp_startpoint;
+		temp_i+= 1;
+	}
+    start_infile.close();
+
 	int S, E, I, Ia, R;
 	E = 0;
 	I = 0;
@@ -767,11 +782,20 @@ int main(int nargs, char ** argsv){
 		cout << "Starting simulation" << i_sim <<  endl;
 		int dummy = 0;
 		int dur_sum = 0;
+
+        for(int i = 0; i < n; ++i){
+            if(G_current.locations[i].S > startPoints[i]){  // Number 40 is Oslo
+				G_current.locations[i].I += startPoints[i];
+				G_current.locations[i].S -= startPoints[i];
+			}
+
+        }
+
 		for(int i_day = 0; i_day < M; ++i_day){
-			if(G_current.locations[40].S > 10){  // Number 40 is Oslo
+		/*	if(G_current.locations[40].S > 10){  // Number 40 is Oslo
 				G_current.locations[40].I += 10;
 				G_current.locations[40].S -= 10;
-			}
+			}*/
 			for (int i = 0; i < n; ++i){
 				G_current.locations[i].seir_step_day(i_day, i, beta, a, gamma);
 				values[i][2*i_day][0] += G_current.locations[i].S;
