@@ -4,16 +4,21 @@
 \alias{OptimFunction}
 \title{OptimFunction}
 \usage{
-OptimFunction(param = c(0.6), d, s, doctorVisitingProb)
+OptimFunction(param = rep(0.75, 5), regions, doctorVisitingProb, d, s,
+  startWeek)
 }
 \arguments{
 \item{param}{a}
+
+\item{regions}{a}
+
+\item{doctorVisitingProb}{a}
 
 \item{d}{a}
 
 \item{s}{a}
 
-\item{doctorVisitingProb}{a}
+\item{startWeek}{a}
 }
 \description{
 OptimFunction

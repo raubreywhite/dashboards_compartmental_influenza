@@ -4,19 +4,18 @@
 \alias{SetupStartInfected}
 \title{SetupStartInfected}
 \usage{
-SetupStartInfected(d, s, startWeek, doctorVisitingProb,
-  initialStartingMultiplier = 2)
+SetupStartInfected(betaFile, betas, d, s, startWeek)
 }
 \arguments{
+\item{betaFile}{a}
+
+\item{betas}{a}
+
 \item{d}{a}
 
 \item{s}{a}
 
 \item{startWeek}{a}
-
-\item{doctorVisitingProb}{a}
-
-\item{initialStartingMultiplier}{a}
 }
 \description{
 SetupStartInfected

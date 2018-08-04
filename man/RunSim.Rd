@@ -4,14 +4,23 @@
 \alias{RunSim}
 \title{RunSim}
 \usage{
-RunSim(param = c(0.6), d, s)
+RunSim(param, regions, doctorVisitingProb, d, s, startWeek,
+  outputFile = tempfile())
 }
 \arguments{
 \item{param}{a}
 
+\item{regions}{a}
+
+\item{doctorVisitingProb}{a}
+
 \item{d}{a}
 
 \item{s}{a}
+
+\item{startWeek}{a}
+
+\item{outputFile}{a}
 }
 \description{
 RunSim

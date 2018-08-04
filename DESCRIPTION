@@ -9,6 +9,7 @@ Imports:
   readxl,
   withr,
   processx,
+  devtools,
   sykdomspuls,
   fhi,
   RAWmisc
